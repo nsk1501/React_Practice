@@ -23,12 +23,10 @@ function App() {
         <h4>React Blog</h4>
       </div>
 
-      <button onClick={sort}>가나다순정렬</button>
-
-      
+      <button onClick={sort}>가나다순정렬</button> 
 
 
-      <button onClick={()=>{
+      <button onClick={()=>{ 
 
         let copy = [...글제목];
         copy[0] = '양식 추천';
@@ -52,11 +50,32 @@ function App() {
         {따봉3} </h4>
         <p>3월 4일 발행</p>
       </div>
-      
-      <h4>{ post }</h4>
-   
+
+      <Modal></Modal>
+
       </div>
-  );
-}
+     );
+    }
+
+    
+
+    function Modal(){
+      return(
+    
+      <div className="modal">
+    <h4>제목</h4>
+    <p>날짜</p>
+    <p>상세내용</p>
+     
+       </div>
+      )
+      }
+
+
+
+
+  
+  
+
 
 export default App;
