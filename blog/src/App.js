@@ -11,7 +11,10 @@ function App() {
    let [따봉1, 따봉변경1] = useState(0);
    let [따봉2, 따봉변경2] = useState(0); 
    let [따봉3, 따봉변경3] = useState(0);
-
+   const sort = () => {
+    const sortedList = [...글제목].sort();
+    글제목변경(sortedList);
+   }
    
 
    return(
@@ -20,7 +23,10 @@ function App() {
         <h4>React Blog</h4>
       </div>
 
-      <button>가나다순정렬</button>
+      <button onClick={sort}>가나다순정렬</button>
+
+      
+
 
       <button onClick={()=>{
 
